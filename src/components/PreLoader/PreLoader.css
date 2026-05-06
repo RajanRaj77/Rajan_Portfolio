@@ -1,0 +1,41 @@
+.preloader {
+  position: fixed; inset: 0;
+  background: #07080d;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.8s ease;
+}
+.preloader.fade-out { opacity: 0; pointer-events: none; }
+.preloader-aurora { position: absolute; inset: 0; }
+.preloader-count {
+  position: relative; z-index: 1;
+  display: flex; align-items: baseline; gap: 4px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.preloader-count.fade-text { opacity: 0; transform: translateY(-20px); }
+.count-num {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(5rem, 15vw, 10rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+.count-symbol {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(2rem, 6vw, 4rem);
+  color: #00ffc8;
+}
+.preloader-label {
+  position: relative; z-index: 1;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-top: 1rem;
+  transition: opacity 0.4s ease;
+}
+.preloader-label.fade-text { opacity: 0; }
